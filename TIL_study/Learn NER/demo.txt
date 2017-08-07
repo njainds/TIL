@@ -1,0 +1,22 @@
+145048208d1632396f6cf0821f1c4fdb0af178c0: http://192.168.33.249:8080/NPRSS/feed/releated-articles?&id=145048208d1632396f6cf0821f1c4fdb0af178c0&langs=1,2,3&type=person
+14504820be8a69522d4ac0147efbce532b1523aa: http://192.168.33.249:8080/NPRSS/feed/releated-articles?&id=14504820be8a69522d4ac0147efbce532b1523aa&langs=1,2,3&type=person
+14504820268240ceb76f65a197d3e28e1f225f21: http://192.168.33.249:8080/NPRSS/feed/releated-articles?&id=14504820268240ceb76f65a197d3e28e1f225f21&langs=1,2,3&type=location
+14504820203131ad84deb79dc3621a4cbc4ce460: http://192.168.33.249:8080/NPRSS/feed/releated-articles?&id=14504820203131ad84deb79dc3621a4cbc4ce460&langs=1,2,3&type=all
+14504820be0c976fc901ba2265073b00fe12f8b5: http://192.168.33.249:8080/NPRSS/feed/releated-articles?&id=14504820be0c976fc901ba2265073b00fe12f8b5&langs=1,2,3&type=all
+145048203410c48ace8ace82f6c78beecde51a8f: http://192.168.33.249:8080/NPRSS/feed/releated-articles?&id=145048203410c48ace8ace82f6c78beecde51a8f&langs=1,2,3&type=all
+
+
+
+Article to article: 
+based on named entities
+Using collaborative filtering- next best article
+
+User based- Get preferred tags and get relevant 
+
+
+Solr:
+http://192.168.33.249:8983/solr/#/nprss/query
+To fetch article ids:
+http://192.168.33.249:8983/solr/nprss/select?q=lang%3Aenglish+AND+similarDocsUpdated_i%3A+1&sort=dateLine+Desc&start=10&rows=100&wt=json&indent=true
+To fetch related articles to the selected article id:
+http://192.168.33.249:8080/NPRSS/feed/releated-articles?&id=145048203410c48ace8ace82f6c78beecde51a8f&langs=1,2,3&type=all

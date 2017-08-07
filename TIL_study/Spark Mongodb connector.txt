@@ -1,0 +1,11 @@
+###First Spark Mongo connector
+https://spark-packages.org/package/Stratio/spark-mongodb
+https://github.com/Stratio/spark-mongodb/blob/master/doc/src/site/sphinx/First_Steps.rst#scala-api
+https://www.mongodb.com/blog/post/tutorial-for-operationalizing-spark-with-mongodb
+
+###Another spark Mongo connector
+https://docs.mongodb.com/spark-connector/master/scala/read-from-mongodb/
+
+Both suport filter and aggregations in mongodb before fetching data in spark
+
+$SPARK_HOME/bin/spark-shell --conf spark.cassandra.connection.host=dsciapp43100 --packages datastax:spark-cassandra-connector:2.0.0-RC1-s_2.11,com.stratio.datasource:spark-mongodb_2.11:0.12.0 --driver-memory 45G

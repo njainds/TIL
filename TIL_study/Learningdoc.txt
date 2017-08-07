@@ -1,0 +1,25 @@
+#DS
+Sklearn in Python:
+1. Logistic Regression:
+Sklearn doesn't show wald chisquare, p vaues and confidence intervals hence couln;t select features based on model output
+ALso it doesn't have forward/backward selection algorithms
+
+In order to do feature selection for LR in sklearn:
+1. Either use RF - put all features and do rank order of features
+2. Randomised feature elimination: start with all fea and remove features one by one based on deviance reduction
+3. Chisquare- get p values for chi squae test of indepence bw each feature and the target variable (Univariate)
+
+Finally choose model based on CV score on accuracy or AUC
+
+Feaure ranking-
+http://blog.datadive.net/selecting-good-features-part-iv-stability-selection-rfe-and-everything-side-by-side/
+
+Signs of the coefficients might change due to multi collinearity.
+
+15 
+-8.38
+-590/-
+reload 75/-
+2 usd /txn
+
+

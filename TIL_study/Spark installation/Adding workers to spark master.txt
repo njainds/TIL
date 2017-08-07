@@ -1,0 +1,1 @@
+https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-standalone-example-2-workers-on-1-node-cluster.html

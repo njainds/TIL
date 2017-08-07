@@ -1,0 +1,14 @@
+import org.apache.spark.sql.types.{StructType,StructField,StringType,IntegerType};
+import org.apache.spark.sql.Row;
+
+val csv = sc.textFile("/path/to/file.csv")
+val rows = csv.map(line => line.split(",").map(_.trim))
+val header = rows.first
+val data = rows.filter(_(0) != header(0))
+val rdd = data.map(row => Row(row(0),row(1).toInt))
+
+val schema = new StructType()
+    .add(StructField("id", StringType, true))
+    .add(StructField("val", IntegerType, true))
+
+val df = sqlContext.createDataFrame(rdd, schema)

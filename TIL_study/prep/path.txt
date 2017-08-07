@@ -1,0 +1,27 @@
+projects explanation
+2. statistics-Johns hopkins classes (Hypothesis testing, confidence intervals calculations,p value, central limit theorm), basic probability & Stats: -2
+3. Linear/logistic, machine elarining: CART, RF,GBM, XGBOOST, Neural netowrks,PCA Rare event problem/- Book plus slides of caltech -3
+3. NLP: bag of words, tf-idf, learn some basic text mining problems -4
+3. Rcommendation engine: methods/types and similarity formulaes.  -1
+4. Python sckikit learn- basic libraries within scikit learn, R libraries -5
+5. Big data technology-> Mapreduce working, Spark working(Dataset, Dataframe, RDD, catalyst optimiser), Kmeans clustering in spark
+6. Data enginering- OLTP, OLAP, ETL   
+
+Introduction:
+ I have overall 5 years of experience working in Data science and I have done my bachelors in engineering from IIT Patna in year 2012.
+Currently I am working as Data scientist at Times Internet. Times Internet is the digital arm of entire times group and within Times Internet I work pecifically for the news business.
+Here I am setting up the Data science practise from screatch. I joined in Jan and since then I've set up entire infrastructure for storing and processing big data in a distributed fashion.
+enabling Business to use this vast data for decision making. I have built various automated reporting systems with visualisation to monitor key metrics like retention,engagement, Segemnt profile,
+Behavioural cohort analysis and so on. This is being used by Business teams to measure product prerformance, optimise campaigns, build retention startegy.
+
+Currently I am working on building user personalisation on mobile App. for eg. recommending News articles to users based on the article customer is reading or has read historically,
+Recommend top News publications based on user attributes for New user.
+
+Predicting customer churn based on clickstream behaviour on App.
+
+Before that I worked at MakemyTrip, there I worked on customer liefecycle management related products like predicting customer's propensity to buy a product, customer churn predction, LTV caculation,
+Identifying cross-sell opportunities, recommmending products, identifying relevant offers.
+
+I worked on end to end implementation of the data science projects and measuring performance, iterate and optimise performance.
+
+

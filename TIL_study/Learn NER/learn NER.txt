@@ -1,0 +1,51 @@
+https://github.com/aleju/ner-crf
+Know the input data format/structure, the training dataset preperation (features and label generation/structure)
+Learn crf and model training
+get sample data in above format to train with only basic features (except postag,lda,gazeteer)
+check results
+
+Learn each of methods postag, lda, gazeteer
+and include each at at time in the abov model and see results
+
+#py-crfsuite (model for crf used for NER)
+http://python-crfsuite.readthedocs.io/en/latest/#
+https://github.com/scrapinghub/python-crfsuite/blob/master/examples/CoNLL%202002.ipynb
+
+# Understanding CRF
+https://www.youtube.com/watch?v=rc3YDj5GiVM
+http://pages.cs.wisc.edu/~jerryzhu/cs838/CRF.pdf
+
+
+
+
+
+Raw dataset for training crf model
+
+In/O its/O sharpest/O attack/O since/O the/O border/ORG standoff/O with/O India/LOC over/O the/O Sikkim/LOC -/O Bhutan/LOC -/O Tibet/LOC tri/O -/O junction/O
+China/LOC on/O Thursday/O made/O an/O oblique/O reference/O to/O the/O 1962/O war/O ,/O saying/O the/O Indian/LOC ./O
+
+input to crfsuite.trainer() is: (feature_values,label)
+
+Assuming the window size to be max:5 tokens, using 2 features-if_word_start_capital & first_3_letter_of_word: Below is the training dataset-
+
+([["wc=1","f3=IN "],["wc=0","ITS"],["wc=0","SHA"],["wc=0","ATT"],["wc=0","SIN"]] ,   ["O","O","O","O","O"])
+([["wc=0","THE"],["wc=0","BOR"],["wc=0","STA"],["wc=0","WIT"],["wc=1","IND"]],	["O","ORG","O","O","LOC"])
+([["wc=0","OVE"],["wc=0","THE"],["wc=1","SIK"],["wc=0","-  "],["wc=1","BHU"]],	["O","O","LOC","O","LOC"])
+([["wc=0","-  "],["wc=1","TIB"],["wc=0","TRI"],["wc=0","-  "],["wc=0","JUN"]],	["O","LOC","O","O","O"])
+([["wc=1","CHI"],["wc=0","ON "],["wc=1","THU"],["wc=0","MAD"],["wc=0","AN "]],	["LOC","O","O","O","O"])
+([["wc=0","OBL"],["wc=0","REF"],["wc=0","TO "],["wc=0","THE"],["wc=0","WAR"]],	["O","O","O","O","O"])
+([["wc=0",",  "],["wc=0","SAY"],["wc=0","THE"],["wc=1","IND"],["wc=0",".  "]],	["O","O","O","LOC","O"])
+
+You may start with stemming, lemmatization, removing stopwords, removing punctuations before training the text. (for both training and test data preparation).
+ 
+
+## HMM Vs. CRF
+ 
+HMM: model joint probability distribution (P(Y,X)), input Xs can't be correlated
+CRF: model conditional probability distribution (P(Y/X)), input Xs can be correlated
+
+CRF:
+Instead of modeling the joint probability distribution whrein we need to consider P(x)- distribution of X and hence need to ensure independence of features (X) ,
+in CRF wemodel conditional probability and hence we need not worry about dependent features and can use rich set of festures
+
+

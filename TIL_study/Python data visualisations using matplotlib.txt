@@ -1,0 +1,2 @@
+https://www.kaggle.com/thomasvg/d/uciml/iris/python-data-visualizations
+https://www.datascience.com/learn-data-science/tutorials/creating-data-visualizations-matplotlib-data-science-python
